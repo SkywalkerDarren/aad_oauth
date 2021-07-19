@@ -110,6 +110,8 @@ class Config {
   /// User agent of web view. (using flutter_webview_plugin)
   String? userAgent;
 
+  BuildContext? context;
+
   /// Azure AD OAuth Configuration. Look at individual fields for description.
   Config(
       {required this.tenant,

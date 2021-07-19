@@ -25,12 +25,8 @@ class AadOAuth {
     _requestToken = RequestToken(_config!);
   }
 
-  /// Set [screenSize] of webview.
-  void setWebViewScreenSize(Rect screenSize) {
-    if (screenSize != _config?.screenSize) {
-      _config?.screenSize = screenSize;
-      _requestCode.sizeChanged();
-    }
+  void setContext(BuildContext context) {
+    _config!.context = context;
   }
 
   /// Perform Azure AD login.

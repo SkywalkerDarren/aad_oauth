@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc4a426c-1b61-4cf9-8a1d-71292972dc1f" name="Default Changelist" comment="" />
+    <list default="true" id="dc4a426c-1b61-4cf9-8a1d-71292972dc1f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_b2c/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example_b2c/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aad_oauth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aad_oauth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/request_code.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/request_code.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +45,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="390" />
@@ -68,8 +97,26 @@
       <option name="project" value="LOCAL" />
       <updated>1626696695311</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="migrate to null-safety">
+      <created>1626697205060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626697205060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="migrate to null-safety" />
@@ -80,10 +127,10 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="744" y="392" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626676883451" />
-    <state x="912" y="312" key="CommitChangelistDialog2" timestamp="1626696695248">
+    <state x="912" y="312" key="CommitChangelistDialog2" timestamp="1626697205009">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="912" y="312" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1626696695248" />
+    <state x="912" y="312" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1626697205009" />
     <state x="100" y="128" width="2360" height="1212" key="DiffContextDialog" timestamp="1626697060177">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
@@ -92,22 +139,22 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="1094" y="709" key="FileChooserDialogImpl/0.28.2560.1412@0.28.2560.1412" timestamp="1626677922699" />
-    <state width="2516" height="595" key="GridCell.Tab.0.bottom" timestamp="1626696688408">
+    <state width="2516" height="594" key="GridCell.Tab.0.bottom" timestamp="1626701483154">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="595" key="GridCell.Tab.0.bottom/0.28.2560.1412@0.28.2560.1412" timestamp="1626696688408" />
-    <state width="2516" height="595" key="GridCell.Tab.0.center" timestamp="1626696688407">
+    <state width="2516" height="594" key="GridCell.Tab.0.bottom/0.28.2560.1412@0.28.2560.1412" timestamp="1626701483154" />
+    <state width="2516" height="594" key="GridCell.Tab.0.center" timestamp="1626701483154">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="595" key="GridCell.Tab.0.center/0.28.2560.1412@0.28.2560.1412" timestamp="1626696688407" />
-    <state width="2516" height="595" key="GridCell.Tab.0.left" timestamp="1626696688407">
+    <state width="2516" height="594" key="GridCell.Tab.0.center/0.28.2560.1412@0.28.2560.1412" timestamp="1626701483154" />
+    <state width="2516" height="594" key="GridCell.Tab.0.left" timestamp="1626701483154">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="595" key="GridCell.Tab.0.left/0.28.2560.1412@0.28.2560.1412" timestamp="1626696688407" />
-    <state width="2516" height="595" key="GridCell.Tab.0.right" timestamp="1626696688407">
+    <state width="2516" height="594" key="GridCell.Tab.0.left/0.28.2560.1412@0.28.2560.1412" timestamp="1626701483154" />
+    <state width="2516" height="594" key="GridCell.Tab.0.right" timestamp="1626701483154">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="595" key="GridCell.Tab.0.right/0.28.2560.1412@0.28.2560.1412" timestamp="1626696688407" />
+    <state width="2516" height="594" key="GridCell.Tab.0.right/0.28.2560.1412@0.28.2560.1412" timestamp="1626701483154" />
     <state x="773" y="369" key="SettingsEditor" timestamp="1626676880041">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
@@ -116,13 +163,13 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="1088" y="424" key="VCS.ChangeListViewerDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626696908723" />
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1626696701205">
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1626697208545">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1626696701205" />
-    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1626695396706">
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1626697208545" />
+    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1626700174971">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup/0.28.2560.1412@0.28.2560.1412" timestamp="1626695396706" />
+    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup/0.28.2560.1412@0.28.2560.1412" timestamp="1626700174971" />
   </component>
 </project>

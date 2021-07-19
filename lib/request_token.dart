@@ -8,8 +8,8 @@ import 'model/token.dart';
 
 class RequestToken {
   final Config config;
-  TokenRequestDetails _tokenRequest;
-  TokenRefreshRequestDetails _tokenRefreshRequest;
+  late TokenRequestDetails _tokenRequest;
+  late TokenRefreshRequestDetails _tokenRefreshRequest;
 
   RequestToken(this.config);
 
@@ -19,14 +19,14 @@ class RequestToken {
         _tokenRequest.url, _tokenRequest.params, _tokenRequest.headers);
   }
 
-  Future<Token> requestRefreshToken(String refreshToken) async {
+  Future<Token> requestRefreshToken(String? refreshToken) async {
     _generateTokenRefreshRequest(refreshToken);
-    return await _sendTokenRequest(_tokenRefreshRequest.url,
+    return await _sendTokenRequest(_tokenRefreshRequest.url!,
         _tokenRefreshRequest.params, _tokenRefreshRequest.headers);
   }
 
-  Future<Token> _sendTokenRequest(String url, Map<String, String> params,
-      Map<String, String> headers) async {
+  Future<Token> _sendTokenRequest(String url, Map<String, String?>? params,
+      Map<String, String>? headers) async {
     var response = await post(Uri.parse(url), body: params, headers: headers);
     Map<String, dynamic> tokenJson = json.decode(response.body);
     var token = Token.fromJson(tokenJson);
@@ -37,7 +37,7 @@ class RequestToken {
     _tokenRequest = TokenRequestDetails(config, code);
   }
 
-  void _generateTokenRefreshRequest(String refreshToken) {
+  void _generateTokenRefreshRequest(String? refreshToken) {
     _tokenRefreshRequest = TokenRefreshRequestDetails(config, refreshToken);
   }
 }

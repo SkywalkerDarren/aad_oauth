@@ -37,6 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     oauth.setContext(context);
+    oauth.setOnCancel(() {
+      showMessage('Logging canceled');
+    });
 
     return Scaffold(
       appBar: AppBar(

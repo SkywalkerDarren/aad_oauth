@@ -4,16 +4,16 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 import 'request/authorization_request.dart';
 import 'model/config.dart';
-import 'package:collection/collection.dart';
 
 class RequestCode {
   final StreamController<String?> _onCodeListener = StreamController();
   final Config _config;
   final AuthorizationRequest _authorizationRequest;
+  void Function()? onCancel;
 
   var _onCodeStream;
 
-  RequestCode(Config config) : _config = config, _authorizationRequest = AuthorizationRequest(config);
+  RequestCode(Config config, this.onCancel) : _config = config, _authorizationRequest = AuthorizationRequest(config);
 
   Future<String> requestCode() async {
     var code;
@@ -38,17 +38,20 @@ class RequestCode {
           }
 
           if (uri.queryParameters['code'] != null) {
-            Navigator.of(_config.context!).pop();
+            Navigator.of(_config.context!).pop(true);
             _onCodeListener.add(uri.queryParameters['code']);
           }
         },
         debuggingEnabled: true,
       );
 
-      await Navigator.of(_config.context!).push(MaterialPageRoute(
+      final result = await Navigator.of(_config.context!).push(MaterialPageRoute(
           builder: (context) => Scaffold(
             body: SafeArea(child: web),
           )));
+      if (result != true && onCancel != null) {
+        onCancel!();
+      }
     } else {
       throw Exception('Context is null. Please call setContext(context).');
     }

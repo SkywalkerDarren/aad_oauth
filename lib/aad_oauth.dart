@@ -29,6 +29,10 @@ class AadOAuth {
     _requestCode.onCancel = onCancel;
   }
 
+  void setOnDismiss(void Function() onDismiss) {
+    _requestCode.onDismiss = onDismiss;
+  }
+
   void setContext(BuildContext context) {
     _config!.context = context;
   }

@@ -18,10 +18,10 @@ class AadOAuth {
 
   /// Instantiating AadOAuth authentication.
   /// [config] Parameters according to official Microsoft Documentation.
-  AadOAuth(Config config, {void Function()? onCancel}) {
+  AadOAuth(Config config, {void Function()? onCancel, void Function()? onDismiss}) {
     _config = config;
     _authStorage = AuthStorage(tokenIdentifier: config.tokenIdentifier);
-    _requestCode = RequestCode(_config!, onCancel);
+    _requestCode = RequestCode(_config!, onCancel, onDismiss);
     _requestToken = RequestToken(_config!);
   }
 

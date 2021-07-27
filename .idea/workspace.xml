@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc4a426c-1b61-4cf9-8a1d-71292972dc1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aad_oauth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aad_oauth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/request_code.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/request_code.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626701863810</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add cancel callback">
+      <created>1626749179315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626749179315</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,17 +127,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="migrate to null-safety" />
     <MESSAGE value="migrate to webview_flutter" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrate to webview_flutter" />
+    <MESSAGE value="add cancel callback" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cancel callback" />
   </component>
   <component name="WindowStateProjectService">
     <state x="744" y="392" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626676883451">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="744" y="392" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626676883451" />
-    <state x="912" y="312" key="CommitChangelistDialog2" timestamp="1626701863732">
+    <state x="912" y="312" key="CommitChangelistDialog2" timestamp="1626749179163">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="912" y="312" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1626701863732" />
+    <state x="912" y="312" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1626749179163" />
     <state x="100" y="128" width="2360" height="1212" key="DiffContextDialog" timestamp="1626697060177">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
@@ -142,22 +147,22 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="1094" y="709" key="FileChooserDialogImpl/0.28.2560.1412@0.28.2560.1412" timestamp="1626677922699" />
-    <state width="2516" height="594" key="GridCell.Tab.0.bottom" timestamp="1626748168365">
+    <state width="2516" height="389" key="GridCell.Tab.0.bottom" timestamp="1626773760864">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="594" key="GridCell.Tab.0.bottom/0.28.2560.1412@0.28.2560.1412" timestamp="1626748168365" />
-    <state width="2516" height="594" key="GridCell.Tab.0.center" timestamp="1626748168365">
+    <state width="2516" height="389" key="GridCell.Tab.0.bottom/0.28.2560.1412@0.28.2560.1412" timestamp="1626773760864" />
+    <state width="2516" height="389" key="GridCell.Tab.0.center" timestamp="1626773760863">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="594" key="GridCell.Tab.0.center/0.28.2560.1412@0.28.2560.1412" timestamp="1626748168365" />
-    <state width="2516" height="594" key="GridCell.Tab.0.left" timestamp="1626748168365">
+    <state width="2516" height="389" key="GridCell.Tab.0.center/0.28.2560.1412@0.28.2560.1412" timestamp="1626773760863" />
+    <state width="2516" height="389" key="GridCell.Tab.0.left" timestamp="1626773760863">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="594" key="GridCell.Tab.0.left/0.28.2560.1412@0.28.2560.1412" timestamp="1626748168365" />
-    <state width="2516" height="594" key="GridCell.Tab.0.right" timestamp="1626748168365">
+    <state width="2516" height="389" key="GridCell.Tab.0.left/0.28.2560.1412@0.28.2560.1412" timestamp="1626773760863" />
+    <state width="2516" height="389" key="GridCell.Tab.0.right" timestamp="1626773760864">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state width="2516" height="594" key="GridCell.Tab.0.right/0.28.2560.1412@0.28.2560.1412" timestamp="1626748168365" />
+    <state width="2516" height="389" key="GridCell.Tab.0.right/0.28.2560.1412@0.28.2560.1412" timestamp="1626773760864" />
     <state x="773" y="369" key="SettingsEditor" timestamp="1626676880041">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
@@ -166,13 +171,39 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="1088" y="424" key="VCS.ChangeListViewerDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626696908723" />
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1626701869992">
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1626749186240">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1626701869992" />
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1626749186240" />
     <state x="943" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1626748056499">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="943" y="350" width="672" height="678" key="search.everywhere.popup/0.28.2560.1412@0.28.2560.1412" timestamp="1626748056499" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>95</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>93</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>101</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/example/lib/main.dart</url>
+          <line>75</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

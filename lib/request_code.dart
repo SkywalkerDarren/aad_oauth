@@ -10,10 +10,11 @@ class RequestCode {
   final Config _config;
   final AuthorizationRequest _authorizationRequest;
   void Function()? onCancel;
+  void Function()? onDismiss;
 
   var _onCodeStream;
 
-  RequestCode(Config config, this.onCancel) : _config = config, _authorizationRequest = AuthorizationRequest(config);
+  RequestCode(Config config, this.onCancel, this.onDismiss) : _config = config, _authorizationRequest = AuthorizationRequest(config);
 
   Future<String> requestCode() async {
     var code;
@@ -39,6 +40,9 @@ class RequestCode {
 
           if (uri.queryParameters['code'] != null) {
             Navigator.of(_config.context!).pop(true);
+            if (onDismiss != null) {
+              onDismiss!();
+            }
             _onCodeListener.add(uri.queryParameters['code']);
           }
         },

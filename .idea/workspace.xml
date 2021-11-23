@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,8 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc4a426c-1b61-4cf9-8a1d-71292972dc1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/aad_oauth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aad_oauth.dart" afterDir="false" />
+    <list default="true" id="dc4a426c-1b61-4cf9-8a1d-71292972dc1f" name="Default Changelist" comment="add dismiss callback">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aad_oauth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aad_oauth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +38,27 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -71,6 +99,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -117,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627359303136</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add dismiss callback">
+      <created>1627359428442</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1627359428442</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,10 +180,10 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="744" y="392" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626676883451" />
-    <state x="912" y="312" key="CommitChangelistDialog2" timestamp="1626749179163">
+    <state x="1485" y="319" key="CommitChangelistDialog2" timestamp="1627359428402">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="912" y="312" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1626749179163" />
+    <state x="1485" y="319" key="CommitChangelistDialog2/0.28.2560.1412@0.28.2560.1412" timestamp="1627359428402" />
     <state x="100" y="128" width="2360" height="1212" key="DiffContextDialog" timestamp="1626697060177">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
@@ -180,14 +216,14 @@
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
     <state x="1088" y="424" key="VCS.ChangeListViewerDialog/0.28.2560.1412@0.28.2560.1412" timestamp="1626696908723" />
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1626749186240">
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2" timestamp="1627360223862">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1626749186240" />
-    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1626748056499">
+    <state x="880" y="470" key="Vcs.Push.Dialog.v2/0.28.2560.1412@0.28.2560.1412" timestamp="1627360223862" />
+    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup" timestamp="1627367164897">
       <screen x="0" y="28" width="2560" height="1412" />
     </state>
-    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup/0.28.2560.1412@0.28.2560.1412" timestamp="1626748056499" />
+    <state x="943" y="350" width="672" height="678" key="search.everywhere.popup/0.28.2560.1412@0.28.2560.1412" timestamp="1627367164897" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

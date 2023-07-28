@@ -67,6 +67,55 @@ class RequestCode {
     }
   }
 
+  Future<String> requestCodeUrl() async {
+    final urlParams = _constructUrlParams();
+
+    if (_config.context != null) {
+      final completer = Completer<String>();
+      var initialURL =
+          "${('${_authorizationRequest.url}?$urlParams').replaceAll(' ', '%20')}"
+          "&nonce=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+      var web = WebView(
+        initialUrl: initialURL,
+        javascriptMode: JavascriptMode.unrestricted,
+        onWebViewCreated: (controller) {},
+        onWebResourceError: (WebResourceError error) {
+          print('WebResourceError: $error');
+          throw Exception('WebResourceError: $error');
+        },
+        onPageFinished: (url) {
+          print('url: $url');
+          var uri = Uri.parse(url);
+
+          if (uri.queryParameters['error'] != null) {
+            Navigator.of(_config.context!).pop();
+            throw Exception('Access denied or authentation canceled.');
+          }
+
+          if (uri.queryParameters['code'] != null) {
+            Navigator.of(_config.context!).pop(true);
+            if (onDismiss != null) {
+              onDismiss!();
+            }
+            completer.complete(uri.toString());
+          }
+        },
+        debuggingEnabled: true,
+      );
+
+      final result = await Navigator.of(_config.context!).push(MaterialPageRoute(
+          builder: (context) => Scaffold(
+            body: SafeArea(child: web),
+          )));
+      if (result != true && onCancel != null) {
+        onCancel!();
+      }
+      return completer.future;
+    } else {
+      throw Exception('Context is null. Please call setContext(context).');
+    }
+  }
+
   Future<void> clearCookies() async {
     await CookieManager().clearCookies();
   }

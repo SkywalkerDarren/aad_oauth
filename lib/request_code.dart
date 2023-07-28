@@ -6,28 +6,33 @@ import 'request/authorization_request.dart';
 import 'model/config.dart';
 
 class RequestCode {
-  final StreamController<String?> _onCodeListener = StreamController();
   final Config _config;
   final AuthorizationRequest _authorizationRequest;
   void Function()? onCancel;
   void Function()? onDismiss;
 
-  var _onCodeStream;
-
   RequestCode(Config config, this.onCancel, this.onDismiss) : _config = config, _authorizationRequest = AuthorizationRequest(config);
 
+  void setContext(BuildContext context) {
+    _config.context = context;
+  }
+
   Future<String> requestCode() async {
-    var code;
     final urlParams = _constructUrlParams();
 
     if (_config.context != null) {
+      final completer = Completer<String>();
       var initialURL =
-      ('${_authorizationRequest.url}?$urlParams').replaceAll(' ', '%20');
+        ('${_authorizationRequest.url}?$urlParams').replaceAll(' ', '%20');
       var web = WebView(
         initialUrl: initialURL,
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (controller) {
 
+        },
+        onWebResourceError: (WebResourceError error) {
+          print('WebResourceError: $error');
+          throw Exception('WebResourceError: $error');
         },
         onPageFinished: (url) {
           print('url: $url');
@@ -43,7 +48,7 @@ class RequestCode {
             if (onDismiss != null) {
               onDismiss!();
             }
-            _onCodeListener.add(uri.queryParameters['code']);
+            completer.complete(uri.queryParameters['code']);
           }
         },
         debuggingEnabled: true,
@@ -56,20 +61,15 @@ class RequestCode {
       if (result != true && onCancel != null) {
         onCancel!();
       }
+      return completer.future;
     } else {
       throw Exception('Context is null. Please call setContext(context).');
     }
-
-    code = await _onCode.first;
-    return code;
   }
 
   Future<void> clearCookies() async {
     await CookieManager().clearCookies();
   }
-
-  Stream<String> get _onCode =>
-      _onCodeStream ??= _onCodeListener.stream.asBroadcastStream();
 
   String _constructUrlParams() =>
       _mapToQueryParams(_authorizationRequest.parameters);

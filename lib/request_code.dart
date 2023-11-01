@@ -27,20 +27,16 @@ class RequestCode {
       var web = WebView(
         initialUrl: initialURL,
         javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (controller) {
-
-        },
-        onWebResourceError: (WebResourceError error) {
-          print('WebResourceError: $error');
-          throw Exception('WebResourceError: $error');
-        },
         onPageFinished: (url) {
           print('url: $url');
           var uri = Uri.parse(url);
 
           if (uri.queryParameters['error'] != null) {
             Navigator.of(_config.context!).pop();
-            throw Exception('Access denied or authentation canceled.');
+            if (!completer.isCompleted) {
+              completer.completeError(Exception('Access denied or authentation canceled.'));
+            }
+            return;
           }
 
           if (uri.queryParameters['code'] != null) {
@@ -48,7 +44,9 @@ class RequestCode {
             if (onDismiss != null) {
               onDismiss!();
             }
-            completer.complete(uri.queryParameters['code']);
+            if (!completer.isCompleted) {
+              completer.complete(uri.queryParameters['code']);
+            }
           }
         },
         debuggingEnabled: true,
@@ -78,18 +76,16 @@ class RequestCode {
       var web = WebView(
         initialUrl: initialURL,
         javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (controller) {},
-        onWebResourceError: (WebResourceError error) {
-          print('WebResourceError: $error');
-          throw Exception('WebResourceError: $error');
-        },
         onPageFinished: (url) {
           print('url: $url');
           var uri = Uri.parse(url);
 
           if (uri.queryParameters['error'] != null) {
             Navigator.of(_config.context!).pop();
-            throw Exception('Access denied or authentation canceled.');
+            if (!completer.isCompleted) {
+              completer.completeError(Exception('Access denied or authentation canceled.'));
+            }
+            return;
           }
 
           if (uri.queryParameters['code'] != null) {
@@ -97,7 +93,9 @@ class RequestCode {
             if (onDismiss != null) {
               onDismiss!();
             }
-            completer.complete(uri.toString());
+            if (!completer.isCompleted) {
+              completer.complete(uri.toString());
+            }
           }
         },
         debuggingEnabled: true,
